@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Narnoor', serif;
+}
+body {
+    background-image: url("CircuitBoardOrig.png");
+    background-size: cover;    
+}
+form{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);
+}
+input{
+    border-style: none;    
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+input[type="text"]{
+    width: 80%;
+    height: 5vh;
+    border-radius: 5px;
+    padding-left: 8px;    
+    font-size: 0.8rem;
+    
+}
+.separador{
+    height: 0.4vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.298);
+}
+/* transition */
+.crear .cargarImagen img,.editar .cargarImagen img, input[type="submit"], .usuarios img, .usuarios .info .iconos a i{
+    transition: 0.2s;
+}
+.contenedor, .listas {    
+    width: 30vw;
+    margin: auto;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;    
+}
+.titulo{
+    margin-top: 2vh;
+    height: 10vh;
+    width: 100%;                
+    background-color: rgb(0, 219, 191);
+    border-radius: 10px 10px 0 0;
+    z-index: 1000000;
+}
+.titulo h1{
+    text-align: center;
+    font-size: 1.5rem;    
+    text-transform: uppercase;
+}
+.crear, .editar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(221, 221, 221);
+    width: 100%;
+    height: 65vh;
+    border-radius: 0 0 10px 10px;
+}
+    .inputs{
+        width: 100%;
+        height: 30%;    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cargarImagen{
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        width: 13vw;
+        height: 13vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        transition: 0.3s;    
+    }
+    .cargarImagen:hover{
+        transform: scale(1.05);
+    }
+        .cargarImagen img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            opacity: 40%;
+            border-radius: 10px;    
+        }
+        .cargarImagen label{
+            font-size: 0.75rem;
+            position: absolute;
+            z-index: 100000;
+            color: white;    
+            text-shadow: 1px 1px 2px black;
+            width: 200px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.7s;
+        }
+        .cargarImagen input[type="file"]{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 1000000;
+            transition: 0.7s;    
+        }
+        .cargarImagen input[type="file"]:hover ~ img{
+            filter: saturate(0);   
+        }
+        .cargarImagen input[type="file"]:hover ~ label{
+            font-size: 0.9rem;
+        }
+    .botonDiv{
+        width: 100%;
+        height: 10vh;    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        align-items: center;
+    }
+        .boton{
+            width: 100%;
+            height: 8vh;    
+            display: flex;
+            justify-content: center;
+        }
+            input[type="submit"]{
+                width: 30%;
+                height: 5vh;            
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 500;    
+                box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.339);
+            }
+            input[type="submit"]:hover{
+                transform: scale(1.05);
+                background-color: rgb(0, 219, 191);
+                font-weight: 800;
+            }
+.listas{
+    background-color: rgb(234, 234, 234);        
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 2vh;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.303);    
+}
+    .usuarios{    
+        width: 100%;
+        height: 20vh;
+        display: flex;    
+        justify-content: space-between;
+        align-items: center;      
+        margin: 2vh 0;
+        padding: 0 5px;    
+    }
+        .usuarios .foto{    
+            height: 100%;
+            width: 20vh;    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            .usuarios img{
+                width: 90%;
+                height: auto;
+                border-radius: 5px;
+                box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.603);
+            }
+            .usuarios img:hover{
+                transform: scale(1.1);
+            }
+        .usuarios .info{
+            width: 65%;
+            height: 90%;        
+            display: flex;
+            margin-right: 5px;   
+            border-radius: 5px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.603);
+        }
+            .usuarios .info .datos{
+                width: 25vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;    
+            }
+                .usuarios .info .datos p{
+                    font-size: 0.8rem;
+                    background-color: rgb(49, 49, 49);
+                    color: rgb(233, 233, 233);
+                    text-align: center;    
+                    padding-bottom: 5px;        
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    border-radius: 5px 0 0 0;
+                }
+                .usuarios .info .datos .p{
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;        
+                }
+                    .usuarios .info .datos .p p{
+                        background-color: rgb(242, 242, 242);
+                        color: rgb(34, 34, 34);
+                        display: flex;    
+                        height: 80%;
+                        text-transform: capitalize;
+                        padding-left: 5px; 
+                        font-size: 0.8rem;
+                        align-items: center;
+                        
+                    }
+                        .usuarios .info .datos .p p span{
+                            text-transform: none;   
+                            margin-left: 7px;    
+                            font-weight: 100; 
+                            max-width: 120px;
+                            cursor: pointer;
+                        }
+                        .usuarios .info .datos .p p span:hover{
+                            background-color: rgba(0, 219, 190, 0.252);
+                        }
+            .usuarios .info .iconos{
+                background-color: rgb(21, 21, 21);
+                border-radius: 0 5px 5px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;    
+                width: 4.5vw;        
+                padding: 0px 0px 5px 0px;
+            }
+                .usuarios .info .iconos a i:hover{
+                    text-shadow: 0px 0px 10px rgb(0, 219, 190);
+                    transform: scale(1.1);
+                }
+@media (max-width: 1100px){
+    .crear, .editar{
+        height: 50vh;
+    }   
+    .contenedor{
+        width: 40vw;
+    }
+    .listas{
+        width: 40vw;
+    }
+    .crear .cargarImagen, .editar .cargarImagen{
+        width: 15vw;
+        height: 15vw;
+    }
+    .crear .cargarImagen:hover, .editar .cargarImagen:hover{
+        width: 17vw;
+        height: 17vw;
+    }
+}
+@media (max-width: 900px){ 
+    .crear, .editar{
+        height: 50vh;
+    }   
+    .contenedor{
+        width: 60vw;
+    }
+    .listas{
+        width: 60vw;
+    }
+    .usuarios .info .datos {
+        width: 54vw;     
+    }
+    .crear .cargarImagen, .editar .cargarImagen{
+        width: 25vw;
+        height: 25vw;
+    }
+    .crear .cargarImagen:hover, .editar .cargarImagen:hover{
+        width: 30vw;
+        height: 30vw;
+    }
+    .usuarios .info .iconos{  
+        width: 7vw;                
+    }
+}
+@media (max-width: 600px){
+    .contenedor{
+        width: 85vw;
+    }
+    .listas{
+        width: 85vw;
+    }
+    .usuarios .info .datos {
+        width: 54vw;     
+    }
+    .crear .cargarImagen, .editar .cargarImagen{
+        width: 35vw;
+        height: 35vw;
+    }
+    .crear .cargarImagen:hover, .editar .cargarImagen:hover{
+        width: 40vw;
+        height: 40vw;
+    }
+    .usuarios .info .iconos{  
+        width: 7vw;                
+    }
+}
+@media (max-width: 350px){
+    .contenedor{
+        width: 90vw;
+    }
+    .titulo h1 {
+        font-size: 1rem;        
+    }
+    .listas{
+        width: 90vw;
+    }
+    .usuarios .info .datos p{
+        font-size: 0.8rem;
+    }    
+    .usuarios .info .datos .p p{         
+        font-size: 0.5rem;
+    }    
+    .crear .cargarImagen, .editar .cargarImagen{
+        width: 50vw;
+        height: 50vw;
+    }
+    .crear .cargarImagen:hover, .editar .cargarImagen:hover{
+        width: 60vw;
+        height: 60vw;        
+    }
+    .usuarios .info .iconos{  
+        width: 8vw;                
+    }
+}
